@@ -1,4 +1,8 @@
 export interface Nota {
+ estudianteId: string;
+ materiaId: string;
+ valor: string;
+ description: string; 
 }
 
 export interface Estudiante {

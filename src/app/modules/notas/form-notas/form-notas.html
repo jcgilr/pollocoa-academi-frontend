@@ -1,26 +1,26 @@
-<form class="space-y-4">
+<form [formGroup]="formRegister" (ngSubmit)="guardar()" autocomplete="off" class="space-y-4">
   <div>
     <label class="block text-sm font-medium text-gray-700">Nombre del estudiante</label>
-    <input type="text" class="w-full border rounded px-3 py-2" />
+    <input id="nombre" type="text" formControlName="nombre" required="" class="w-full border rounded px-3 py-2" />
   </div>
   <div>
     <label class="block text-sm font-medium text-gray-700">Materia</label>
-    <input type="text" class="w-full border rounded px-3 py-2" />
+    <input id="materia" type="text" formControlName="materia" class="w-full border rounded px-3 py-2" />
   </div>
   <div>
     <label class="block text-sm font-medium text-gray-700">Valor</label>
-    <input type="email" class="w-full border rounded px-3 py-2" />
+    <input id="valor" type="number" formControlName="valor" class="w-full border rounded px-3 py-2" />
   </div>
   <div>
     <label class="block text-sm font-medium text-gray-700">Discripcion</label>
-    <input type="text" class="w-full border rounded px-3 py-2" />
+    <input id="descripcion" type="text" formControlName="descripcion" class="w-full border rounded px-3 py-2" />
   </div>
 
   <div class="flex justify-end gap-2 mt-4">
     <button type="button" (click)="cancelar()" class="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400">
       Cancelar
     </button>
-    <button type="button" (click)="guardar()" class="px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700">
+    <button type="submit" class="px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700">
       Guardar
     </button>
   </div>
